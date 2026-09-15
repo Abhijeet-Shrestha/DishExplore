@@ -1,0 +1,19 @@
+
+
+.herosection {
+  height: 650px;
+  overflow: hidden;
+}
+
+.hero-video {
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  z-index: 2;
+}
