@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import { Outlet } from 'react-router-dom'
 
-const Home = () => {
+const LayoutPage = () => {
   return (
     <>
       <Header />
@@ -11,4 +11,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default LayoutPage

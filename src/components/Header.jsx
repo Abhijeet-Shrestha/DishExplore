@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <header className=" px-4">
+      <header className=" px-4 border-bottom">
         <nav className="navbar navbar-expand-lg  mb-3">
           <div className="container-fluid text-decoration-none">
             <a className="navbar-brand ms-4" href="/">
@@ -23,14 +23,14 @@ const Header = () => {
             <div className="collapse navbar-collapse fs-5" id="navbarScroll">
               <ul className="navbar-nav m-auto my-2 my-lg-0 navbar-nav-scroll g-5 ">
                 <li className="nav-item">
-                  <a className="nav-link active " aria-current="page" href="/">
+                  <a className="nav-link" aria-current="page" href="/">
                     Home
                   </a>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link " href="#">
-                    Discover
+                  <a className="nav-link " href="/recipes">
+                    Recipes
                   </a>
                 </li>
 
@@ -40,15 +40,15 @@ const Header = () => {
                   </a>
                 </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link " href="#">
                     About
                   </a>
-                </li>
+                </li> */}
               </ul>
             <div>
               <a href="#" className="text-decoration-none nav-link">
-                ❤️Favorites
+                 <i className="text-danger bi bi-heart-fill"></i> Favorites
               </a>
             </div>
             </div>

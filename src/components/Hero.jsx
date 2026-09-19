@@ -41,6 +41,7 @@ const Hero = () => {
           and find something you'll love to cook.
         </p>
 
+
         {/* Search */}
         <form className="d-flex justify-content-center">
           <input
