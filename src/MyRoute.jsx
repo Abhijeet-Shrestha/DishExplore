@@ -7,6 +7,8 @@ import RecipeList from './components/RecipeList'
 import LayoutPage from './pages/LayoutPage'
 import HomePage from './pages/HomePage'
 import RecipePage from './pages/RecipePage'
+import RecipeDetails from './pages/RecipeDetails'
+import Categories from './pages/Categories'
 
 
 const MyRoute = () => {
@@ -17,7 +19,12 @@ const MyRoute = () => {
         {/* <Route index element={<Hero />} /> */}
         <Route index element={<HomePage />} />
         <Route path='/recipes' element={<RecipePage />} />
+        <Route path='/recipeDetails/:recipe_id' element={<RecipeDetails />} />
+        <Route path='/categories' element={<Categories />} />
+
         {/* <Route index element={<RecipeList />} /> */}
+
+
 
 
         

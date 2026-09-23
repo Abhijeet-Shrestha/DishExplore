@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import Hero from "../components/Hero";
 import RecipeCard from "../components/RecipeCard";
+import Video_Instructions from "../components/Video_Instructions";
 
 const HomePage = () => {
   const [Recipes, setRecipe] = useState([]);
@@ -18,28 +19,40 @@ const HomePage = () => {
     );
 
   return (
+    <>
+      <Hero />
 
-  <>
-    <Hero/>
+      {/* Explore Recipe */}
+      <div className="my-5 px-5" id="tranding-recipe">
+        <h2 className="fw-semibold ">Explore Recipes</h2>
+        {/* <p className="mx-5 fs-4 text-dark">Explore recipes by category</p> */}
+        <hr />
+
+        <div className="row row-cols-1 row-cols-md-2  row-cols-lg-4 g-3">
+          {Recipes.slice(0, 4).map((item) => (
+            <RecipeCard data={item} /> // we use props
+          ))}
+        </div>
+      </div>
+      {/* End of Explore Recipe */}
 
 
-   <div className="my-5 px-5" id="tranding-recipe">
-  <h2 className='fw-semibold '>Explore Recipes</h2>
-  {/* <p className="mx-5 fs-4 text-dark">Explore recipes by category</p> */}
-  <hr />
+      {/* Video Section of recipe */}
 
-  <div className="row row-cols-1 row-cols-md-2  row-cols-lg-4 g-3">
+      <div className="my-5 px-5" id="video-recipe">
+        <h2 className="fw-semibold ">Cook Along with Our Recipes</h2>
+        {/* <p className="mx-5 fs-4 text-dark">Follow step-by-step cooking videos and bring delicious recipes to life in your own kitchen.</p>git */}
+        <hr />
 
-    {
-      Recipes.slice(0,4).map((item)=>(
-        <RecipeCard data={item}/> // we use props
-      ))
-    }
-</div>
-</div> 
-  
-  </>
-  )
+        <div className="row row-cols-1 row-cols-md-2  row-cols-lg-4 g-3 justify-content-center">
+          {Recipes.slice(5,8).map((item) => (
+            <Video_Instructions data={item} /> // we use props
+          ))}
+        </div>
+      </div>
+      {/* End of Video Section of recipe */}
+    </>
+  );
 };
 
 export default HomePage;
