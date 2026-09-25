@@ -2,10 +2,11 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import RecipeCard from '../components/RecipeCard';
+import Footer from '../components/Footer';
 
 const RecipePage = () => {
     
-       const [Recipes, setRecipe] = useState([]);
+  const [Recipes, setRecipe] = useState([]);
 
   axios
     .get("https://www.themealdb.com/api/json/v1/1/search.php?s=") // api call
@@ -34,6 +35,8 @@ const RecipePage = () => {
     }
     </div>
 </div> 
+
+<Footer/>
 
     </>
   )

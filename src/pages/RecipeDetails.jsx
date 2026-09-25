@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactPlayer from "react-player";
+import Footer from '../components/Footer';
 
 const RecipeDetails = () => {
 
@@ -74,6 +75,7 @@ for (let i = 1; i <= 20; i++) {
 
 
     {/* Information */}
+
     <div className="col-lg-6">
 
       <h1 className="display-5 fw-bold">
@@ -96,6 +98,9 @@ for (let i = 1; i <= 20; i++) {
       </button>
 
     </div>
+
+
+{/* Ingredients Section */}
 
 <h5 className='text-center fs-3'>Ingredients</h5>
 <hr className='m-3'/>
@@ -123,6 +128,9 @@ for (let i = 1; i <= 20; i++) {
 
 </div>
 
+
+{/* Video Section  */}
+
 {recipe.strYoutube && (
   <section className="mt-5">
 
@@ -143,9 +151,13 @@ for (let i = 1; i <= 20; i++) {
 
   </section>
 )}
+
+
  </div>
 
 </div>
+{/* Footer section */}
+<Footer/>
 
     </>
   );
