@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import heroVideo from "../assets/video/herosection.mp4";
+import Search from "./Search";
 
 const Hero = () => {
+
+  // const [Recipes, setRecipe] = useState([]);
   return (
     <div className="herosection position-relative" id="herosection">
 
@@ -11,10 +14,9 @@ const Hero = () => {
         autoPlay
         muted
         loop
-        playsInline
+      
       >
         <source src={heroVideo} type="video/mp4" />
-        Your browser does not support video.
       </video>
 
       {/* Dark Overlay */}
@@ -43,20 +45,9 @@ const Hero = () => {
 
 
         {/* Search */}
-        <form className="d-flex justify-content-center">
-          <input
-            type="text"
-            className="form-control form-control-lg w-50"
-            placeholder="Search recipes or ingredients..."
+        <Search Placeholder={"Search recipes or ingredients..."}
+          
           />
-
-          <button
-            type="submit"
-            className="btn btn-success btn-lg ms-2"
-          >
-            Search
-          </button>
-        </form>
 
       </div>
 

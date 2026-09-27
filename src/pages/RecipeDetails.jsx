@@ -3,14 +3,61 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactPlayer from "react-player";
 import Footer from '../components/Footer';
+import Swal from 'sweetalert2';
 
 const RecipeDetails = () => {
+
+  const addFavorite = (item_id)=>{
+      // / getting localstorage data if exist else empty array
+  
+      const recipeItems = JSON.parse(localStorage.getItem('favoriteItem')) || []; 
+  
+        // Setting product info in object arrry
+  
+        const recipeData = {
+          id:recipe.idMeal,
+          title: recipe.strMeal,
+          image: recipe.strMealThumb,
+          categorie : recipe.strCategory,
+          country: recipe.strArea
+        }
+        // Checking if the item is alrady exist or not
+  
+        const existingItem = recipeItems.find((item)=>item.id === recipe.idMeal)
+        if(existingItem){
+  
+        Swal.fire({
+        title: "error!!",
+        icon: "error",
+        text: "Iteam Already exits",
+        timer: 3000,
+        draggable: true,
+      });
+  
+  }
+  else{
+      recipeItems.push(recipeData)
+      localStorage.setItem('favoriteItem',JSON.stringify(recipeItems))
+   Swal.fire({
+          title: "Success!",
+          icon: "success",
+          text: "Iteam successfully add",
+          timer: 3000,
+          draggable: true,
+        });
+      
+        }
+    }
 
   const params = useParams();
 
   let rid = params.recipe_id;
 
   const [recipe, setRecipe] = useState({});
+
+  
+
+
 
 
   // Get recipe details
@@ -92,7 +139,9 @@ for (let i = 1; i <= 20; i++) {
 
       
 
-      <button className="btn btn-outline-success">
+      <button className="btn btn-outline-success"
+         onClick={()=>addFavorite(recipe.idMeal)}
+      >
         <i className="bi bi-heart"></i>
         {" "}Add to Favorites
       </button>

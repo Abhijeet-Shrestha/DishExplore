@@ -29,10 +29,10 @@ const Video_Instructions = (props) => {
 
 
             
-        <a href={`/productview/${props.data.idMeal}`} className="btn btn-small my-1" id='view'>View Recipe</a>
+        <a href={`/recipeDetails/${props.data.idMeal}`} className="btn btn-small my-1 btn-outline-warning" id='v-view' >View Recipe</a>
 
-        <a href={`/productview/${props.data.idMeal}`} className="btn" id='Favorites'>
-        <i class="bi bi-heart-fill"></i> <span>Favorites</span></a>
+        {/* <a href={`/favorites`} className="btn" id='Favorites'>
+        <i class="bi bi-heart-fill"></i> <span>Favorites</span></a> */}
         </div>
         </div>
         </div>

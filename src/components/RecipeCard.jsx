@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Categories from '../pages/Categories';
 
 const RecipeCard = (props) => {
 
@@ -54,13 +55,15 @@ const RecipeCard = (props) => {
               </a>
 
 
-              <button
+              {/* <button
+                onClick={()=>addFavorite(Recipe.idMeal)}
                 className="btn btn-outline-success"
                 id="Favorites"
-              >
+            >
                 <i className="bi bi-heart-fill"></i>
                 {" "}Favorites
-              </button>
+            
+              </button> */}
 
             </div>
 

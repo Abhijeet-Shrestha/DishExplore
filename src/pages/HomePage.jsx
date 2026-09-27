@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Hero from "../components/Hero";
 import RecipeCard from "../components/RecipeCard";
 import Video_Instructions from "../components/Video_Instructions";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   const [Recipes, setRecipe] = useState([]);
@@ -23,7 +24,7 @@ const HomePage = () => {
       <Hero />
 
       {/* Explore Recipe */}
-      <div className="my-5 px-5" id="tranding-recipe">
+      <div className="my-5 px-5" id="tranding-recip ">
         <h2 className="fw-semibold ">Explore Recipes</h2>
         {/* <p className="mx-5 fs-4 text-dark">Explore recipes by category</p> */}
         <hr />
@@ -51,6 +52,32 @@ const HomePage = () => {
         </div>
       </div>
       {/* End of Video Section of recipe */}
+
+
+
+      {/* Popular Recipe  */}
+
+ <div className="my-5 px-5" id="tranding-recipe">
+        <h2 className="fw-semibold ">Popular Recipes</h2>
+        {/* <p className="mx-5 fs-4 text-dark">Explore recipes by category</p> */}
+        <hr />
+
+        <div className="row row-cols-1 row-cols-md-2  row-cols-lg-4 g-3">
+          {Recipes.slice(17, 21).map((item) => (
+            <RecipeCard data={item} /> // we use props
+          ))}
+        </div>
+      </div>
+
+      {/* End of Popular Recipe  */}
+
+
+
+      {/* Footer */}
+      
+      <Footer/>
+      {/* End of Footer */}
+
     </>
   );
 };
