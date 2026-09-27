@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import RecipeCard from '../components/RecipeCard';
 import axios from 'axios';
 import Search from '../components/Search';
+import Footer from '../components/Footer';
 
 const Categories = () => {
 
@@ -77,6 +78,7 @@ const Categories = () => {
 
           <Search
             Placeholder="Search recipes, ingredients..."
+            setRecipe={setRecipe}
           />
 
         </div>
@@ -90,7 +92,7 @@ const Categories = () => {
               selectedCategory === "All"
                 ? "btn-success"
                 : "btn-outline-success"
-            } mx-2`}
+            } mx-2 my-2`}
             onClick={() => handleCategory("All")}>
             All
           </button>
@@ -198,6 +200,8 @@ const Categories = () => {
         
 
       </div>
+
+      <Footer/>
 
     </>
   );
