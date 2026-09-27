@@ -2,9 +2,34 @@
 
 DishExplore is a modern recipe discovery web application built with React.js. It allows users to discover recipes, search for dishes, filter recipes by category, view complete recipe details, watch cooking videos, and save their favorite recipes for later.
 
-The project was developed as a React course project to practice React components, props, state management, hooks, API integration, routing, forms, conditional rendering, and localStorage.
+The project was developed by React components, props, state management, hooks, API integration, routing, forms, conditional rendering, and localStorage.
 
 ---
+
+## ⚙️ Project Setup
+
+### Prerequisites
+
+Before running the project, make sure you have installed:
+
+- Node.js
+- Git
+- A modern web browser
+
+ Clone the Repository
+
+```bash
+git clone https://github.com/Abhijeet-Shrestha/DishExplore.git
+```
+```bash
+ cd DishExplore
+```
+```bash
+ npm install
+```
+```bash
+ npm run dev
+```
 
 
 # Project Structure
@@ -158,6 +183,6 @@ https://www.themealdb.com/api/json/v1/1/search.php?s=
 - Add personalized recipe recommendations.
 - Add meal planning and shopping-list features.
 - Add dark/light mode.
-- Add cloud-based favorite synchronization.
+
 
 
