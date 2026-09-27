@@ -6,6 +6,12 @@ The project was developed by React components, props, state management, hooks, A
 
 ---
 
+## 🌐 Live Demo
+
+👉 **[Visit DishExplore](https://dishexplore.vercel.app/)**
+
+---
+
 ## ⚙️ Project Setup
 
 ### Prerequisites
